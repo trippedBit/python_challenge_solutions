@@ -7,7 +7,8 @@ The hints are:
 4. The page source code contains an information that 400 nothings are enough.
 
 
-So the solution here is pretty simple: Just follow the chain by changing the URL based on the next nothing and follow the instructions.
+So the solution here is pretty simple:
+Just follow the chain by changing the URL based on the next nothing and follow the instructions.
 """
 
 from urllib import request
@@ -22,10 +23,13 @@ for counter in range(0, 400):
             nextNothing = content.split("next nothing is ")[1]  # Extract next nothing
             continue
         elif "Divide by two" in content:  # After some nothings there is a prompt to divide the number by to
-            nextNothing = str(int(nextNothing) / 2)  # nextNothing is a string. To divide it, it must be converted into an integer and then back into a string for use in the URL. 
+            # nextNothing is a string. To divide it, it must be converted into an integer
+            # and then back into a string for use in the URL.
+            nextNothing = str(int(nextNothing) / 2)
             continue
         else:
             solution = content
             break
 
-print("The URL for the next challenge is: http://www.pythonchallenge.com/pc/def/" + str(solution))  # The solution already contains .html
+# The solution already contains ".html"
+print("The URL for the next challenge is: http://www.pythonchallenge.com/pc/def/" + str(solution))

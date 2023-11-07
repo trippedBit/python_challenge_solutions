@@ -17,10 +17,10 @@ import zipfile
 
 # Download the zip file
 with request.urlopen("http://www.pythonchallenge.com/pc/def/channel.zip") as response:
-        content = response.read()
-        with open("channel.zip", "wb") as file:
-            file.write(content)
-            file.close()
+    content = response.read()
+    with open("channel.zip", "wb") as file:
+        file.write(content)
+        file.close()
 
 # Extract zip file
 with zipfile.ZipFile("channel.zip", "r") as zipContainer:

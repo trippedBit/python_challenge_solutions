@@ -7,6 +7,7 @@ So the solution here is to first shift all characters in the given text.
 The result tells you to apply the same action to the url.
 """
 
+
 def shift_text(text: str,
                shift: int) -> str:
     newString = ""
@@ -22,7 +23,9 @@ def shift_text(text: str,
             newString = newString + element
     return newString
 
-givenString = "g fmnc wms bgblr rpylqjyrc gr zw fylb. rfyrq ufyr amknsrcpq ypc dmp. bmgle gr gl zw fylb gq glcddgagclr ylb rfyr'q ufw rfgq rcvr gq qm jmle. sqgle qrpgle.kyicrpylq() gq pcamkkclbcb. lmu ynnjw ml rfc spj."
+
+givenString = "g fmnc wms bgblr rpylqjyrc gr zw fylb. rfyrq ufyr amknsrcpq ypc dmp. bmgle gr gl zw fylb gq glcddgagclr " + \
+              "ylb rfyr'q ufw rfgq rcvr gq qm jmle. sqgle qrpgle.kyicrpylq() gq pcamkkclbcb. lmu ynnjw ml rfc spj."
 
 abc = ["a", "b", "c", "d", "e",
        "f", "g", "h", "i", "j",

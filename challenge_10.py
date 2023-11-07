@@ -44,11 +44,11 @@ Append i itself = 2                 -> Result string = "1112"
 Append len(i+j) = len("1"+"1") = 2  -> Result string = "11122"
 Append i itself = 1                 -> Result string = "111221"
 """
-print("".join(str(len(i+j))+i for i,j in re.findall("(\\d)(\\1*)", "1211")))
+print("".join(str(len(i+j))+i for i, j in re.findall("(\\d)(\\1*)", "1211")))
 
 # To get the 30th number and its length, just start with "1" as input and repeat the function 30 times
 for i in range(30):
-    numberString = "".join(str(len(i+j))+i for i,j in re.findall("(\\d)(\\1*)", numberString))
+    numberString = "".join(str(len(i+j))+i for i, j in re.findall("(\\d)(\\1*)", numberString))
 
 solution = str(len(numberString))
 print("The URL for the next challenge is: http://www.pythonchallenge.com/pc/return/" + str(solution) + ".html")
