@@ -1,1 +1,1 @@
-pillow==11.1.0  # needed for challenge 7
+pillow==11.2.1  # needed for challenge 7
